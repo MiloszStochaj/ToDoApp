@@ -1,21 +1,27 @@
 <div class="app">
-  <h1>Todo list</h1>
-  <div class="todos">
-    <input
-      matInput
-      [(ngModel)]="text"
-      (keyup.enter)="addTodo()"
-      placeholder="Enter your task..."
-      autofocus
-    />
-
-    <button (click)="addTodo()" mat-raised-button color="primary">
-      Add task
-    </button>
-    <button (click)="removeAll()" mat-raised-button color="primary">
-      Remove All
-    </button>
-  </div>
+  
+      <div class="input__container">
+          <h1>Todo list</h1>
+          <div class="todos">
+            <input
+              matInput
+              [(ngModel)]="text"
+              (keyup.enter)="addTodo()"
+              placeholder="Enter your task..."
+              autofocus
+            />
+            <div class="buttons">
+                <button class="addTask__button" (click)="addTodo()" mat-raised-button color="primary">
+                  Add task
+                </button>
+                <button class="removeAll__button" (click)="removeAll()" mat-stroked-button color="primary">
+                  Remove All
+                </button>
+          
+            </div>
+          </div>
+      </div>
+  
 
   <div *ngFor="let todo of todos; let i = index" class="tasks">
   

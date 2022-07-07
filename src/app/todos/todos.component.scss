@@ -1,19 +1,56 @@
+:host {
+  text-align: center;
+}
+
+.app {
+  margin: 2rem;
+ 
+  
+}
+
+.input__container{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px -3px rgba(66, 68, 90, 1);
+}
+
 .tasks {
-    position:relative;
-    margin:0.5rem;
-    display: block;
-    padding:0.5rem;
-    border: 1px solid gray;
+  text-align: left;
+  position: relative;
+  margin: 0.5rem;
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  max-width: 100%;
 }
 
-
-
-mat-icon{
-    position: absolute;
-    right: 0.5rem;
-    cursor: pointer;
+input {
+  font-size: 0.9rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
 }
 
-.done{
-    text-decoration: line-through;
+mat-icon {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.buttons {
+  margin: 1rem;
+}
+
+.addTask__button {
+  margin: 0.5rem;
+}
+
+.removeAll__button {
+  margin: 0.5rem;
 }
