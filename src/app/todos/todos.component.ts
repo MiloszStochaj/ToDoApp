@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from './model/todo';
+import { StorageService } from './storage.service';
 
 @Component({
   selector: 'app-todos',
@@ -9,6 +10,7 @@ import { Todo } from './model/todo';
 export class TodosComponent implements OnInit {
   public todos: Todo[] = [];
   public text: string = '';
+ 
 
   public clear() {
     this.text = '';
@@ -26,6 +28,7 @@ export class TodosComponent implements OnInit {
     };
     this.todos.push(todo);
     this.clear();
+    this.storageService.saveTodos(this.todos);
   }
 
   public setDone(todo: Todo) {
@@ -36,7 +39,9 @@ export class TodosComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(private storageService: StorageService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todos = this.storageService.loadTodos()
+  }
 }
