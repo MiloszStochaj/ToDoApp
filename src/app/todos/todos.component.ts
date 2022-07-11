@@ -18,7 +18,10 @@ export class TodosComponent implements OnInit {
 
   public removeAll() {
     this.todos = [];
+    this.storageService.saveTodos(this.todos);
   }
+
+  
 
   public addTodo() {
     const todo: Todo = {
