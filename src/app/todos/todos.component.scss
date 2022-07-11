@@ -1,27 +1,44 @@
-:host {
-  text-align: center;
-}
-
 .app {
   margin: 2rem;
- 
-  
+    width: 30%;
 }
 
-.input__container{
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 12px -3px rgba(66, 68, 90, 1);
+.title {
+  margin: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: justify;
+  max-width: 10rem;
+  font-size: 3rem;
+}
+
+.input__container {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px -3px rgba(66, 68, 90, 1);
+}
+
+.todos {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
 }
 
 .tasks {
   text-align: left;
-  position: relative;
   margin: 0.5rem;
   display: block;
   padding: 0.5rem;
   border: 1px solid gray;
-  max-width: 100%;
+  position: relative;
 }
 
 input {
@@ -30,27 +47,34 @@ input {
   width: 10rem;
   border-radius: 5px;
   border: 1px solid black;
-  text-align: center;
 }
 
-mat-icon {
+.tasks mat-icon {
   position: absolute;
   right: 0.5rem;
   cursor: pointer;
 }
 
 .done {
-  text-decoration: line-through;
+  text-decoration: line-through 2px rgb(153, 0, 0);
 }
 
 .buttons {
+
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .addTask__button {
   margin: 0.5rem;
+  width: 7rem;
+
 }
 
 .removeAll__button {
   margin: 0.5rem;
+  width: 7rem;
+
 }

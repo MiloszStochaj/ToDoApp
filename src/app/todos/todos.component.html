@@ -1,34 +1,46 @@
 <div class="app">
-  
-      <div class="input__container">
-          <h1>Todo list</h1>
-          <div class="todos">
-            <input
-              matInput
-              [(ngModel)]="text"
-              (keyup.enter)="addTodo()"
-              placeholder="Enter your task..."
-              autofocus
-            />
-            <div class="buttons">
-                <button class="addTask__button" (click)="addTodo()" mat-raised-button color="primary">
-                  Add task
-                </button>
-                <button class="removeAll__button" (click)="removeAll()" mat-stroked-button color="primary">
-                  Remove All
-                </button>
-          
-            </div>
-          </div>
+  <div class="input__container">
+    <div class="title">
+      <h1>
+        TO<br />DO<br />LIST
+        <mat-icon>check</mat-icon>
+      </h1>
+    </div>
+    <div class="todos">
+      <input
+        matInput
+        [(ngModel)]="text"
+        (keyup.enter)="addTodo()"
+        placeholder="Enter your task..."
+        autofocus
+      />
+      <div class="buttons">
+        <button
+          class="addTask__button"
+          (click)="addTodo()"
+          mat-raised-button
+          color="primary"
+        >
+          Add task
+        </button>
+        <button
+          class="removeAll__button"
+          (click)="removeAll()"
+          mat-stroked-button
+          color="primary"
+        >
+          Remove All
+        </button>
       </div>
-  
+    </div>
+  </div>
 
   <div *ngFor="let todo of todos; let i = index" class="tasks">
-  
-        <span>{{ i + 1 }}.</span>
-        <span (click)="setDone(todo)" [ngClass]="{done: todo.done}"> {{ todo.text }} </span>
-       
-    
+    <span>{{ i + 1 }}.</span>
+    <span (click)="setDone(todo)" [ngClass]="{ done: todo.done }">
+      {{ todo.text }}
+    </span>
+
     <mat-icon>delete</mat-icon>
   </div>
 </div>
