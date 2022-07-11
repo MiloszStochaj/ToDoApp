@@ -36,11 +36,12 @@
   </div>
 
   <div *ngFor="let todo of todos; let i = index" class="tasks">
-    <span>{{ i + 1 }}.</span>
-    <span (click)="setDone(todo)" [ngClass]="{ done: todo.done }">
-      {{ todo.text }}
-    </span>
-
-    <mat-icon (click)="deleteTodo(todo)">delete</mat-icon>
+    <div class="task" (click)="setDone(todo)" >
+        <span>{{ i + 1 }}.</span>
+        <span [ngClass]="{ done: todo.done }">
+          {{ todo.text }}
+        </span>
+        <mat-icon (click)="deleteTodo(todo)">delete</mat-icon>
+    </div>
   </div>
 </div>

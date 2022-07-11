@@ -18,7 +18,7 @@ h1 {
 
 .input__container {
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 0px 0px 12px -3px rgba(66, 68, 90, 1);
 }
 
@@ -29,35 +29,50 @@ h1 {
   align-items: center;
   
   
-  
 }
 
 .tasks {
   text-align: left;
   margin: 0.5rem;
   display: block;
-  padding: 0.5rem;
-  border: 1px solid gray;
+  padding: 0.8rem;
+  color: rgb(255, 233, 233);
+  
   border-radius: 50px;
   position: relative;
+  background: rgb(71,59,67);
+  background: linear-gradient(90deg, rgba(71,59,67,1) 0%, rgba(205,66,194,1) 0%, rgba(255,15,114,0.7070938215102975) 64%, rgba(250,0,104,1) 92%);
+}
+
+.task{
+  position: relative;
+  left: 0.7rem;
 }
 
 input {
   font-size: 0.9rem;
   height: 2rem;
   width: 10rem;
-  border-radius: 5px;
-  border: 1px solid black;
+  border: none;
+  border-bottom: 1px solid black;
+
+}
+
+
+.todos :focus{
+  outline:none;
+
 }
 
 .tasks mat-icon {
   position: absolute;
-  right: 0.5rem;
+  right: 1rem;
   cursor: pointer;
+
 }
 
 .done {
-  text-decoration: line-through 2px rgb(153, 0, 0);
+  text-decoration: line-through 2px rgba(226,145,33,1);
 }
 
 .buttons {
@@ -66,16 +81,19 @@ input {
   display: flex;
   flex-direction: column;
   
+  
 }
 
 .addTask__button {
   margin: 0.5rem;
   width: 7rem;
-
+background-color: rgba(250,0,104,1);
 }
 
 .removeAll__button {
   margin: 0.5rem;
   width: 7rem;
+  color: white;
+  background-color: #ff9f18;
 
 }
