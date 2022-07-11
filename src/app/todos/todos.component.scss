@@ -1,6 +1,5 @@
 .app {
   margin: 2rem;
-    width: 30%;
 }
 
 .title {
@@ -30,6 +29,7 @@ h1 {
   align-items: center;
   
   
+  
 }
 
 .tasks {
@@ -38,6 +38,7 @@ h1 {
   display: block;
   padding: 0.5rem;
   border: 1px solid gray;
+  border-radius: 50px;
   position: relative;
 }
 
