@@ -21,7 +21,6 @@ export class TodosComponent implements OnInit {
     this.storageService.saveTodos(this.todos);
   }
 
-  
 
   public addTodo() {
     const todo: Todo = {
@@ -40,6 +39,13 @@ export class TodosComponent implements OnInit {
     } else {
       todo.done = false;
     }
+  }
+
+  public deleteTodo(todo: Todo){
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index,1);
+
+    this.storageService.saveTodos(this.todos);
   }
 
   constructor(private storageService: StorageService) {}
