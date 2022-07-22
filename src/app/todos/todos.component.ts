@@ -46,6 +46,7 @@ export class TodosComponent implements OnInit {
     } else {
       todo.done = false;
     }
+    this.storageService.saveTodos(this.todos);
   }
 
   public deleteTodo(todo: Todo){
