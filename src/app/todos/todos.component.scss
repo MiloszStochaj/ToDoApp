@@ -1,9 +1,4 @@
-:host {
-  margin: 2rem;
-}
-
-.app {
-  margin: 2rem;
+.app{
   width: 30rem;
 }
 
@@ -98,4 +93,14 @@ input {
   width: 7rem;
   color: white;
   background-color: #ff9f18;
+}
+
+@media only screen and (max-width: 600px){
+  .buttons{
+    margin: 0;
+  }
+
+  .app{
+    width: 100%;
+  }
 }
