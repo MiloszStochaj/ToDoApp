@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { secondSlide, fade, slide} from './animations';
 import { Todo } from './model/todo';
 import { StorageService } from './storage.service';
 
@@ -6,6 +7,12 @@ import { StorageService } from './storage.service';
   selector: 'app-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss'],
+  animations: [
+    fade,
+    slide,
+    secondSlide,
+   
+  ]
 })
 export class TodosComponent implements OnInit {
   public todos: Todo[] = [];

@@ -1,4 +1,4 @@
-<div class="app">
+<div class="app" @fade @slide>
   <div class="input__container">
     <div class="title">
       <h1>
@@ -24,6 +24,7 @@
           Add task
         </button>
         <button
+        
           class="removeAll__button"
           (click)="removeAll()"
           mat-stroked-button
@@ -35,13 +36,13 @@
     </div>
   </div>
 
-  <div *ngFor="let todo of todos; let i = index" class="tasks">
+  <div *ngFor="let todo of todos; let i = index" class="tasks" @fade @secondSlide>
     <div class="task" (click)="setDone(todo)" >
         <span>{{ i + 1 }}.</span>
         <span [ngClass]="{ done: todo.done }">
           {{ todo.text }}
         </span>
-        <mat-icon (click)="deleteTodo(todo)">delete</mat-icon>
+        <mat-icon @secondSlide (click)="deleteTodo(todo)">delete</mat-icon>
     </div>
   </div>
 </div>
